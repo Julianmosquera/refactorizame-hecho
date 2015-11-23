@@ -8,22 +8,12 @@ public class Refactorizar {
 
     public static void main(String[] args) {
         boolean esPrimo = false;// p=esPrimo.
-        int numDigitos=0 ;
         int ndigitos=0 ;
+        int numDigitos=0 ;
         numDigitos = 4; //introducir un metodo en estas lineas que nos retorne numdigitos.
-        if (numDigitos <= 0) {
-            System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
-        }
-        for (int numComparar = 1; numComparar <= 99999; numComparar++) {//cambia i por numcomparar.
-            int divisionEntera = numComparar;
-
-            int contador = 0;
-
-            while (divisionEntera != 0) {
-                divisionEntera = divisionEntera / 10;// nos da los digitos, hacer metodod de contador de numdigitos.
-                contador++;
-            } 
-            ndigitos = contador;
+        introduceDigitos(numDigitos);
+        for (int numComparar = 1; numComparar <= 99999; numComparar++) {    
+            ndigitos = contadorDivisionEntera(numComparar);
 
             if (ndigitos == numDigitos) {
                 if (numComparar < 4) {
@@ -59,6 +49,25 @@ public class Refactorizar {
                     System.out.println(numComparar);
                 }
             }
+        }
+    }
+
+    public static int contadorDivisionEntera(int numComparar) {
+        int ndigitos;
+        //cambia i por numcomparar.
+        int divisionEntera = numComparar;
+        int contador = 0;
+        while (divisionEntera != 0) {
+            divisionEntera = divisionEntera / 10;// nos da los digitos, hacer metodod de contador de numdigitos.
+            contador++;
+        }
+        ndigitos = contador;
+        return ndigitos;
+    }
+
+    public static void introduceDigitos(int numDigitos) {
+        if (numDigitos <= 0) {
+            System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
         }
     }
 
