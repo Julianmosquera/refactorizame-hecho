@@ -77,8 +77,9 @@ public class Refactorizar {
         Scanner obx= new Scanner(System.in);
         System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
         int numDigitos=obx.nextInt();
-        if (numDigitos <= 0) {
+        while (numDigitos <= 0) {
             System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
+        numDigitos=obx.nextInt();
         }
         return numDigitos;
     }
