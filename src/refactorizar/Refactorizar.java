@@ -10,7 +10,7 @@ public class Refactorizar {
 
     public static void main(String[] args) {
         boolean esPrimo = false;// p=esPrimo.
-        int ndigitos=0 ;
+        int ndigitos=0;
         int numDigitos=0 ;
         numDigitos = introduceDigitos(); //introducir un metodo en estas lineas que nos retorne numdigitos.
         
